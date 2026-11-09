@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "permute-then-adapt"
+version = "0.1.0"
+description = "Permutation-calibrated weak-to-strong image-text adaptation"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Jinhao Li"},
+  {name = "Sarah Erfani"},
+  {name = "Lei Feng"},
+  {name = "Guangrui Li"},
+  {name = "James Bailey"},
+  {name = "Feng Liu"},
+]
+dependencies = [
+  "torch==2.9.1",
+  "torchvision==0.24.1",
+  "transformers==4.57.1",
+  "numpy==1.26.4",
+  "Pillow==10.4.0",
+  "tqdm==4.66.4",
+  "safetensors==0.4.5",
+]
+
+[project.optional-dependencies]
+eval = ["datasets==3.1.0", "scipy==1.13.1", "scikit-learn==1.5.1"]
+
+[project.urls]
+Repository = "https://github.com/JinhaoLee/Permute-then-Adapt"
+Paper = "https://openreview.net/forum?id=ibeDXGKMar"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+pta = ["assets/*.json", "assets/*LICENSE*", "assets/*.txt"]
+
+

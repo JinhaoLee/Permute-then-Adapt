@@ -1,0 +1,20 @@
+{
+  "datasets": [
+    {
+      "name": "custom-classification",
+      "task": "classification",
+      "records": "../data/classification-test-local.jsonl",
+      "class_names": "../data/class-names-local.json",
+      "numerics": "legacy"
+    },
+    {
+      "name": "custom-retrieval",
+      "task": "retrieval",
+      "records": "../data/retrieval-test-local.jsonl",
+      "caption_mode": "all",
+      "protocol": "explicit-image-disjoint-test-split",
+      "numerics": "fp32"
+    }
+  ],
+  "expected_classification_datasets": ["custom-classification"]
+}
